@@ -23,16 +23,20 @@
           //  * > applyDiscount(45.99, 0.12) // 40.4712
           //  */
 
-
+           //how many inputs? 2
+           //what typ of input? numbers
+           //what type of output? numbers
 
            "use strict";
 
-               function applyDiscount(num){
-                   num = totalBill * tipAmount;
-                   return alert('You should tip $' + num);
+               function applyDiscount(finalPrice){
+                   finalPrice = originalPrice - (originalPrice * discountPercent);
+                   return alert('Discounted price is $' + finalPrice);
                }
-               var totalBill = parseFloat(prompt ('Input total amount of bill; '));
+                var originalPrice = parseFloat(prompt ('What is the price? '));
+                var discountPercent = parseFloat(prompt ('How much is the discount? '));
 
+           applyDiscount();
 
         </script>
 
