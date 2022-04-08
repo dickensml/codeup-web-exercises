@@ -104,6 +104,7 @@
                  */
                         <script>
 
+
                             "use strict";
 
                             function calculateTip(num){
@@ -117,14 +118,28 @@
 
 
                         </script>
-                /**
                  * TODO:
                  * Use prompt and alert in combination with your calculateTip function to
                  * prompt the user for the bill total and a percentage they would like to tip,
                  * then display the dollar amount they should tip
                  */
+                        <script>
 
-                /**
+
+                            "use strict";
+
+                            function calculateTip(num){
+                                num = totalBill * tipAmount;
+                                return alert('You should tip $' + num);
+                            }
+                            var totalBill = parseFloat(prompt ('Input total amount of bill; '));
+                            var tipAmount = parseFloat(prompt ('How much would you like to tip: '));
+
+                            calculateTip();
+
+
+                        </script>
+/**
                  * TODO:
                  * Create a function named `applyDiscount`. This function should accept a price
                  * (before a discount is applied), and a discount percentage (a number between 0
@@ -138,6 +153,8 @@
                  *
                  * > applyDiscount(45.99, 0.12) // 40.4712
                  */
+
+
             </script>
 
         </body>
