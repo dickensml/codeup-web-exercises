@@ -154,6 +154,21 @@
                  * > applyDiscount(45.99, 0.12) // 40.4712
                  */
 
+                <script>
+
+
+                    "use strict";
+
+                    function applyDiscount(finalPrice){
+                        finalPrice = originalPrice - (originalPrice * discountPercent);
+                        return alert('Discounted price is $' + finalPrice);
+                    }
+                    var originalPrice = parseFloat(prompt ('What is the price? '));
+                    var discountPercent = parseFloat(prompt ('How much is the discount? '));
+
+                    applyDiscount();
+
+                </script>
 
             </script>
 
