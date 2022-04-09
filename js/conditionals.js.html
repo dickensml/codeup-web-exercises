@@ -67,6 +67,24 @@
          * You should see a different message every time you refresh the page
          */
 
+<script>
+
+    "use strict";
+
+    function analyzeColor(randomColor) {
+
+        var color = alert('Here is a random color:');
+
+        var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+
+        var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+        alert(randomColor);
+    }
+    analyzeColor();
+
+</script>
+
         /**
          * TODO:
          * Comment out the code above, and refactor your function to use a switch-case statement
