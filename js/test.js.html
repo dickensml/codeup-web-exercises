@@ -38,26 +38,26 @@
 
             var originalPrice =  prompt('How much was your bill?');
             var luckyNumber = prompt('Push OK to get a lucky number and discount!');
-            var random = Math.floor(Math.random() * 6);;
+            var random = Math.floor(Math.random() * 6);
 
             switch(luckyNumber) {
                 case 0:
-                    alert('Your lucky number is' + random === 0) ('0. Aw man, no discount for you.');
+                    return('Your lucky number is' + random === 0) ('0. Aw man, no discount for you.');
                     break;
                 case 1:
-                    alert('Your lucky number is...1' + random === 1) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .9);
+                    return('Your lucky number is...1' + random === 1) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .9);
                     break;
                 case 2:
-                    alert('Your lucky number is...2' + random === 2) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .75);
-                    break;
+                    return('Your lucky number is...2' + random === 2) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .75);
+                    return;
                 case 3:
-                    alert('Your lucky number is...3' + random === 3) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .65);
+                    return('Your lucky number is...3' + random === 3) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .65);
                     break;
                 case 4:
-                    alert('Your lucky number is...4' + random === 4) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .5);
+                    return('Your lucky number is...4' + random === 4) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .5);
                     break;
                 case 5:
-                    alert('Your lucky number is...5' + random === 5) + ('. Your stuff is FREE');
+                    return('Your lucky number is...5' + random === 5) + ('. Your stuff is FREE');
                     break;
                 default:
                     break;
