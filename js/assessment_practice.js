@@ -1,8 +1,8 @@
 //Assessment practice
 
-    var isString = ('string');
 
-function isAFunction(isString) {
-    typeof (isString);
+    function isAFunction(inPut) {
+    return typeof (inPut === 'true');
+
 
     }
