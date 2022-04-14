@@ -1,3 +1,9 @@
+'use strict';
 
+    (function () {
 
-    var = names ['Sophie', 'Owen', 'MikeD', 'Chuck',];
+        var names = ['Sophie', 'Owen', 'MikeD', 'Chuck']
+
+        console.log(names);
+
+    })();
