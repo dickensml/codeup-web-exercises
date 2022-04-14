@@ -1,9 +1,8 @@
-'use strict';
+(function(){
+    'use strict';
 
-    (function () {
-
-        var names = ['Sophie', 'Owen', 'MikeD', 'Chuck']
-
+        let names = ['Sophie', 'Owen', 'MikeD', 'Chuck']
         console.log(names);
 
-    })();
+
+})();
