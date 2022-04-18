@@ -9,6 +9,14 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
+    function sayHello(inputName){
+
+        return(alert('Hello ' + inputName + '!'));
+    }
+    var userName = prompt("What's your name? ");
+
+    sayHello(userName);
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -16,6 +24,15 @@
  *
  * console.log 'helloMessage' to check your work
  */
+
+
+    function sayHello(myName){
+
+        return(alert('Hello ' + myName + '!'));
+    }
+    var userName = prompt("What's my name? ");
+
+    sayHello(userName);
 
 /**
  * TODO:
@@ -46,6 +63,12 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+    var random = Math.floor((Math.random() * 3) + 1);
+    function isTwo(num){
+        return num === 2
+    }
+    console.log (isTwo(random));
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -58,12 +81,30 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+    function calculateTip(num){
+        num = totalBill * tipAmount;
+        return alert('You should tip $' + num);
+    }
+    var totalBill = parseFloat(prompt ('Input total amount of bill; '));
+    var tipAmount = parseFloat(prompt ('How much would you like to tip: '));
+
+    calculateTip();
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+    function calculateTip(num){
+        num = totalBill * tipAmount;
+        return alert('You should tip $' + num);
+    }
+    var totalBill = parseFloat(prompt ('Input total amount of bill; '));
+    var tipAmount = parseFloat(prompt ('How much would you like to tip: '));
+
+    calculateTip();
 
 /**
  * TODO:
@@ -79,3 +120,12 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+    function applyDiscount(finalPrice){
+        finalPrice = originalPrice - (originalPrice * discountPercent);
+        return alert('Discounted price is $' + finalPrice);
+    }
+    var originalPrice = parseFloat(prompt ('What is the price? '));
+    var discountPercent = parseFloat(prompt ('How much is the discount? '));
+
+    applyDiscount();
