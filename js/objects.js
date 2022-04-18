@@ -12,6 +12,15 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+  //  var person = {
+  //       firstName: 'Michael',
+  //       lastName: 'Dickens',
+  //       greeting: 'Hello! My name is ',
+
+    //}
+       // console.log (person);
+
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,6 +30,8 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+    //console.log(person.greeting + person.firstName + ' ' + person.lastName);
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +47,36 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+        //output: name, amount before, discount, final amount
+        // identify if amount is > $200
+        // function that takes in and does the math
+        //var for: discount
+
+
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+
+        var finalAmount = ('number');
+
+            shoppers.forEach (function (shopper) {
+               // console.log(shopper.amount);
+                var discount = (shopper.amount * .12);
+
+                if (shopper.amount > 200) {
+                    finalAmount = (shopper.amount * .88);
+                    return alert(shopper.name + ' spent ' + shopper.amount + ' and received a  discount of ' + discount + '. Their final amount is  ' + finalAmount + '.');
+                } else {
+                    return alert(shopper.name + ' spent ' + shopper.amount + '. Their final amount is ' + shopper.amount + '.');
+                }
+
+        })
+
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
