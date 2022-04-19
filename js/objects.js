@@ -76,8 +76,6 @@
         })
 
 
-
-
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -90,6 +88,18 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {authorLastName: 'Wallace', authorFirstName: 'William', title: 'A walking guide of London.'},
+        {authorLastName: 'Walsh', authorFirstName: 'Joe', title: "Life's been good to me so far."},
+        {authorLastName: 'Floyd', authorFirstName: 'Pink', title: 'Sonnets to my Mother.'},
+        {authorLastName: 'Young', authorFirstName: 'Angus', title: 'Modern theory of electricity.'},
+        {authorLastName: 'Yeat', authorFirstName: 'William Butler', title: 'Walkabout in Ireland.'}
+    ];
+
+
+
+
 
     /**
      * TODO:
