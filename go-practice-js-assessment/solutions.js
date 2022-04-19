@@ -96,11 +96,13 @@ function isBoolean(input) {
 
 //Define a function named upperCase that takes in a single input. If the input is not a string, return false. If the input is a non-numeric string, then return it with all the letters capitalized.
 
+    // function upperCase (input8) {
+    //     if (typeof input8 === 'string') {
+    //         return (input8.toUpperCase())
+    //     } else
+    //         return false;
+    // }
+
     function upperCase (input8) {
-        if (input8 === 'string') {
-            return (input8.toUpperCase());
-        } else if (input8 === '') {
-            return ('');
-        } else
-             return false;
+        return typeof input8 === 'string' ? input8.toUpperCase() : false;
     }
