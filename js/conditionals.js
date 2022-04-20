@@ -50,8 +50,8 @@
 //                  will contain a different color every time the page loads)
 
 
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 // /**
 //  * TODO:
@@ -60,17 +60,17 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //  */
 
 
-    function analyzeColor(randomColor) {
-
-        var color = alert('Here is a random color:');
-
-        var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-
-        var randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-    alert(randomColor);
-}
-    analyzeColor();
+//     function analyzeColor(randomColor) {
+//
+//         var color = alert('Here is a random color:');
+//
+//         var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//
+//         var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//
+//     alert(randomColor);
+// }
+//     analyzeColor();
 
 
 
@@ -149,6 +149,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+    //how many inputs?  luckyNumber, totalAmount, discPrice
+    //how many outputs?
 
 /**
  * TODO:
@@ -160,6 +162,32 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
+
+var originalAmount = prompt('How much was your total bill?');
+var luckyNumber = confirm('Push "OK" for a lucky number') Math.floor(Math.random() * 6));
+var finalAmount = ('number');
+var discount = ('number');
+
+function calculateTotal(originalNumber) {
+    if (luckyNumber === 0) {
+        return (discount = 1);
+    } else if (luckyNumber === 1) {
+        return (discount = .90);
+    } else if (luckyNumber === 2) {
+        return (discount = .75);
+    } else if (luckyNumber === 3) {
+        return (discount = .65);
+    } else if (luckyNumber === 4) {
+        return (discount = .50);
+    } else {
+        (luckyNumber = 5);
+        alert('Everything is free!!');
+    }
+    return finalAmount(originalAmount * discPrice);
+
+
+}
+calculateTotal;
 
 /**
  * TODO:
