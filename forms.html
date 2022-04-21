@@ -11,40 +11,48 @@
 <form method="POST" action="https://request-inspector.glitch.me/">
 
 
-        <div>
-            <label for="email">Email</label>
-            <input id="email" type="text" name="email" placeholder="Enter your email address">
-        </div>
+    <div>
+        <label for="email">Email</label>
+        <input id="email" type="text" name="email" placeholder="Enter your email address">
+    </div>
 
-        <div>
-            <label for="password">Password</label>
-            <input id="password" type="password" password='password' placeholder="Enter your password">
-        </div>
+    <div>
+        <label for="password">Password</label>
+        <input id="password" type="password" password='password' placeholder="Enter your password">
+    </div>
 
-        <div>
-            <label for="bio">Password</label>
-            <input id="bio" type="textarea" name="bio" placeholder="Enter a short bio:">
+    <div>
+        <label for="bio">Password</label>
+        <input id="bio" type="textarea" name="bio" placeholder="Enter a short bio:">
 
-        </div>
+    </div>
 
-        <div>
+    <div>
+        <h3>How did you hear about us?</h3>
+        <input id="billboard" type="radio" name="billboard" value="Billboard">
+        <label for="billboard">Billboard</label><br>
 
-            <input id="billboard" type="radio" name="how_did_you_hear_about_us" value="Billboard">
-                <label for="billboard">Billboard</label><br>
+        <input id="radio" type="radio" name="radio_advertisement" value="Radio Advertisement">
+        <label for="radio">Radio Advertisement</label><br>
 
-            <input id="radio" type="radio" name="how_did_you_hear_about_us" value="Radio Advertisement">
-                <label for="radio">Radio Advertisement</label><br>
+        <input id="internet_advertisement" type="radio" name="internet_advertisement" value="Internet Advertisement">
+        <label for="internet_advertisement">Internet Advertisement</label><br>
 
-            <input id="internet_advertisement" type="radio" name="how_did_you_hear_about_us" value="Internet Advertisement">
-                <label for="internet_advertisement">Internet Advertisement</label><br>
+        <input id="other" type="radio" name="other" value="Other">
+        <label for="other">Other</label><br>
+    </div>
 
-            <input id="other" type="radio" name="how_did_you_hear_about_us" value="Other">
-            <label for="other">Other</label><br>
+    <div>
+        <h3>Which web browser are you using?</h3>
+        <select name="web_browser">
+            <option value="google">Google</option>
+            <option value="duck_duck_go">Duck Duck Go</option>
+            <option value="Bing">Bing</option>
+            <option value="Alta Vista">Alta Vista</option>
+        </select>
 
-        </div>
-    </form>
-
-
+    </div>
+</form>
 
 
 </body>
