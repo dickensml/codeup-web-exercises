@@ -1,4 +1,31 @@
-.fancy-header {
-    color: purple;
-    text-decoration: underline;
+/*.fancy-header {*/
+/*    color: purple;*/
+/*    text-decoration: underline;*/
+/*}*/
+
+h1 { text-align: center;
+    color: blue;
+    font-family: "Trebuchet MS", sans-serif;
 }
+
+h2, h3, h4, h5 {
+    color: blue;
+    text-decoration: underline;}
+
+ body { background-color: rgba(128, 128, 128, 0.22);
+ }
+
+ /*body { background-image: url("/Users/michaeldickens/IdeaProjects/codeup-web-exercises/images/sophie avatar.JPG");*/
+ /*}*/
+
+ul { list-style: square; }
+
+title, head, body {font-family: "Trebuchet MS", sans-serif; }
+
+td, tr { font-size: 15px;
+    padding: 15px;
+}
+
+a:link {color: blue;}
+a:link visited {color: grey}
+a:hover { color: red}
