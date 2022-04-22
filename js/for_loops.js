@@ -13,16 +13,16 @@
 
 
 
-    function showMultiplicationTable(input) {
-        var inPut =
-        var multNum = 0;
-
-    var input = parseInt(prompt ('Input a number: '));
-
-        multNum ++;
-        while (multNum <= 10) {
-
-          console.log(input * multnum);
-      }
-
-    }
+    // function showMultiplicationTable(input) {
+    //     var inPut =
+    //     var multNum = 0;
+    //
+    // var input = parseInt(prompt ('Input a number: '));
+    //
+    //     multNum ++;
+    //     while (multNum <= 10) {
+    //
+    //       console.log(input * multnum);
+    //   }
+    //
+    // }

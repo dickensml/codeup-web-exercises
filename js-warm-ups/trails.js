@@ -23,9 +23,9 @@ var trails = [
             isPaved: false
         }
     ]
-    function totalDistance(trails) {
-        arr.forEach(function(trail)) (isPaved = false) {
-            return ()
-        }
-
-    }
+    // function totalDistance(trails) {
+    //     arr.forEach(function(trail)) (isPaved = false) {
+    //         return ()
+    //     }
+    //
+    // }
