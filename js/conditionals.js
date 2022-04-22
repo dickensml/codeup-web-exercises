@@ -163,31 +163,52 @@
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
 
+
 var originalAmount = prompt('How much was your total bill?');
-var luckyNumber = confirm('Push "OK" for a lucky number') Math.floor(Math.random() * 6));
-var finalAmount = ('number');
-var discount = ('number');
+//var finalAmount = (number);
+var luckyNumber = confirm('Would you like to pick a lucky number?');
+    alert('Your lucky number is ' + Math.floor(Math.random() * 6));
 
-function calculateTotal(originalNumber) {
-    if (luckyNumber === 0) {
-        return (discount = 1);
-    } else if (luckyNumber === 1) {
-        return (discount = .90);
-    } else if (luckyNumber === 2) {
-        return (discount = .75);
-    } else if (luckyNumber === 3) {
-        return (discount = .65);
-    } else if (luckyNumber === 4) {
-        return (discount = .50);
-    } else {
-        (luckyNumber = 5);
-        alert('Everything is free!!');
+function calculateTotal(luckyNumber) {
+    //     if (luckyNumber === 0) {
+    //         return (finalAmount = originalAmount);
+    //     } else if (luckyNumber === 1) {
+    //         return (finalAmouunt =originalAmount * .9);
+    //     } else if (luckyNumber === 2) {
+    //         return (finalAMount =originalAmount * .75);
+    //     } else if (luckyNumber === 3) {
+    //         return (finalAmount = originalAmount * .65);
+    //     } else if (luckyNumber === 4) {
+    //         return (finalAmount = originalAmount * .5)
+    //     }else
+    //         return ('You get everything for FREE!');
+    //
+    // alert('Your final cost is: ' + (finalAmount));
+
+    switch (luckyNumber) {
+        case (luckyNumber === 0):
+            return (finalAmount = originalAmount);
+            break;
+        case (luckyNumber === 1):
+            return (finalAmouunt = originalAmount * .9);
+            break;
+        case (luckyNumber === 2):
+            return (finalAMount = originalAmount * .75);
+            break;
+        case (luckyNumber === 3):
+            return (finalAmount = originalAmount * .65);
+            break;
+        case (luckyNumber === 4):
+            return (finalAmount = originalAmount * .5)
+            break;
+        default:
+                alert('You get everything for FREE!');
+
+            //alert('Your final cost is: ' + (finalAmount);
     }
-    return finalAmount(originalAmount * discPrice);
 
+}calculateTotal;
 
-}
-calculateTotal;
 
 /**
  * TODO:
