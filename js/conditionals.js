@@ -164,50 +164,65 @@
 // var luckyNumber = Math.floor(Math.random() * 6);
 
 
-var originalAmount = prompt('How much was your total bill?');
-//var finalAmount = (number);
-var luckyNumber = confirm('Would you like to pick a lucky number?');
-    alert('Your lucky number is ' + Math.floor(Math.random() * 6));
+// function calculateTotal(luckyNumber) {
+//
+//     var originalPrice =  prompt('How much was your bill?');
+//     var luckyNumber = prompt('Push OK to get a lucky number and discount!');
+//     var random = Math.floor(Math.random() * 6);
+//
+//     switch(luckyNumber) {
+//         case 0:
+//             return('Your lucky number is' + random === 0) ('0. Aw man, no discount for you.');
+//             break;
+//         case 1:
+//             return('Your lucky number is...1' + random === 1) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .9);
+//             break;
+//         case 2:
+//             return('Your lucky number is...2' + random === 2) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .75);
+//             return;
+//         case 3:
+//             return('Your lucky number is...3' + random === 3) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .65);
+//             break;
+//         case 4:
+//             return('Your lucky number is...4' + random === 4) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .5);
+//             break;
+//         case 5:
+//             return('Your lucky number is...5' + random === 5) + ('. Your stuff is FREE');
+//             break;
+//         default:
+//             break;
+//     }
+// }
+// calculateTotal();
 
-function calculateTotal(luckyNumber) {
-    //     if (luckyNumber === 0) {
-    //         return (finalAmount = originalAmount);
-    //     } else if (luckyNumber === 1) {
-    //         return (finalAmouunt =originalAmount * .9);
-    //     } else if (luckyNumber === 2) {
-    //         return (finalAMount =originalAmount * .75);
-    //     } else if (luckyNumber === 3) {
-    //         return (finalAmount = originalAmount * .65);
-    //     } else if (luckyNumber === 4) {
-    //         return (finalAmount = originalAmount * .5)
-    //     }else
-    //         return ('You get everything for FREE!');
-    //
-    // alert('Your final cost is: ' + (finalAmount));
+var originalAmount = parseFloat(prompt('How much was your total bill?'));
 
+var luckyNumber = Math.floor(Math.random()*6);
+    alert('Your lucky number is ' + luckyNumber);
+var finalAmount = (number);
+
+function calculateTotal(luckyNumber, originalAmount) {
     switch (luckyNumber) {
-        case (luckyNumber === 0):
-            return (finalAmount = originalAmount);
+        case 0:
+            return originalAmount
             break;
-        case (luckyNumber === 1):
-            return (finalAmouunt = originalAmount * .9);
+        case 1:
+            return originalAmount - originalAmount * .1;
             break;
-        case (luckyNumber === 2):
-            return (finalAMount = originalAmount * .75);
+        case 2:
+            return originalAmount - originalAmount * .25;
             break;
-        case (luckyNumber === 3):
-            return (finalAmount = originalAmount * .65);
+        case 3:
+            return originalAmount - originalAmount * .35;
             break;
-        case (luckyNumber === 4):
-            return (finalAmount = originalAmount * .5)
+        case 4:
+            return originalAmount - originalAmount * .5;
             break;
         default:
-                alert('You get everything for FREE!');
-
-            //alert('Your final cost is: ' + (finalAmount);
+            alert('You get everything for FREE!!');
     }
 
-}calculateTotal;
+}calculateTotal();
 
 
 /**

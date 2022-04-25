@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+    <body>
+
+    /**
+    * TODO:
+    * Suppose there's a promotion in Walmart, each customer is given a randomly
+    * generated "lucky number" between 0 and 5. If your lucky number is 0 you have
+    * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
+    * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
+    * everything for free!.
+    *
+    * Write a function named `calculateTotal` which accepts a lucky number and total
+    * amount, and returns the discounted price.
+    *
+    * Example:
+    * calculateTotal(0, 100) // returns 100
+    * calculateTotal(4, 100) // returns 50
+    * calculateTotal(5, 100) // returns 0
+    *
+    * Test your function by passing it various values and checking for the expected
+    * return value.
+    */
+    //How many inputs? 2
+    //Input types? numbers    --Need two prompts to collect data
+    //Output types? numbers
+    //  --need a random number generator between 0 and 5
+    //  --need alert to tell them the number, discount, and final price
+
+    <script>
+
+        "use strict";
+        function calculateTotal(luckyNumber) {
+
+            var originalPrice =  prompt('How much was your bill?');
+            var luckyNumber = prompt('Push OK to get a lucky number and discount!');
+            var random = Math.floor(Math.random() * 6);
+
+            switch(luckyNumber) {
+                case 0:
+                    return('Your lucky number is' + random === 0) ('0. Aw man, no discount for you.');
+                    break;
+                case 1:
+                    return('Your lucky number is...1' + random === 1) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .9);
+                    break;
+                case 2:
+                    return('Your lucky number is...2' + random === 2) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .75);
+                    return;
+                case 3:
+                    return('Your lucky number is...3' + random === 3) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .65);
+                    break;
+                case 4:
+                    return('Your lucky number is...4' + random === 4) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .5);
+                    break;
+                case 5:
+                    return('Your lucky number is...5' + random === 5) + ('. Your stuff is FREE');
+                    break;
+                default:
+                    break;
+                    }
+                }
+            calculateTotal();
+
+    </script>
+
+    </body>
+</html>
