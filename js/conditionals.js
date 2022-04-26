@@ -164,65 +164,38 @@
 // var luckyNumber = Math.floor(Math.random() * 6);
 
 
-// function calculateTotal(luckyNumber) {
+
+// function calculateTotal(originalPrice, random) {
 //
 //     var originalPrice =  prompt('How much was your bill?');
-//     var luckyNumber = prompt('Push OK to get a lucky number and discount!');
-//     var random = Math.floor(Math.random() * 6);
+//     return originalPrice;
+//     var luckyNumber = confirm('Push OK to get a lucky number and discount!')
+//         return random = Math.floor(Math.random() * 6);
 //
-//     switch(luckyNumber) {
+//     switch(random) {
 //         case 0:
-//             return('Your lucky number is' + random === 0) ('0. Aw man, no discount for you.');
+//             return('Your lucky number is 0. Aw man, no discount for you. Your total price is still' + originalPrice + '.');
 //             break;
 //         case 1:
-//             return('Your lucky number is...1' + random === 1) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .9);
+//             return('Your lucky number is...1.  Which gives you a discount of 10%. Your final price is ' + originalPrice * .9);
 //             break;
 //         case 2:
-//             return('Your lucky number is...2' + random === 2) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .75);
+//             return('Your lucky number is...2. Which gives you a discount of 10%. Your final price is ' + originalPrice * .75);
 //             return;
 //         case 3:
-//             return('Your lucky number is...3' + random === 3) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .65);
+//             return('Your lucky number is...3. Which gives you a discount of 10%. Your final price is ' + originalPrice * .65);
 //             break;
 //         case 4:
-//             return('Your lucky number is...4' + random === 4) + ('. Which gives you a discount of 10%. Your final price is ' + originalPrice * .5);
+//             return('Your lucky number is...4. Which gives you a discount of 10%. Your final price is ' + originalPrice * .5);
 //             break;
 //         case 5:
-//             return('Your lucky number is...5' + random === 5) + ('. Your stuff is FREE');
+//             return('Your lucky number is...5. Your stuff is FREE!!');
 //             break;
 //         default:
 //             break;
 //     }
 // }
 // calculateTotal();
-
-var originalAmount = parseFloat(prompt('How much was your total bill?'));
-
-var luckyNumber = Math.floor(Math.random()*6);
-    alert('Your lucky number is ' + luckyNumber);
-var finalAmount = (number);
-
-function calculateTotal(luckyNumber, originalAmount) {
-    switch (luckyNumber) {
-        case 0:
-            return originalAmount
-            break;
-        case 1:
-            return originalAmount - originalAmount * .1;
-            break;
-        case 2:
-            return originalAmount - originalAmount * .25;
-            break;
-        case 3:
-            return originalAmount - originalAmount * .35;
-            break;
-        case 4:
-            return originalAmount - originalAmount * .5;
-            break;
-        default:
-            alert('You get everything for FREE!!');
-    }
-
-}calculateTotal();
 
 
 /**
@@ -243,3 +216,10 @@ function calculateTotal(luckyNumber, originalAmount) {
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+var input = confirm('Would yo like to enter a number?');
+var number = prompt('Ok, enter a number: ');
+
+var output = (number % 2 === 0) ? 'Your number is even.' : 'Your number is odd';
+var output2 = (number > 0) ? 'Your number is positive.' : 'Your number is negative.';
+
