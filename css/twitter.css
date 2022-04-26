@@ -119,17 +119,19 @@ a {
 }
 
 .media {
-    width: 100%;
+    width:100%;
     padding: .5em;
     overflow: visible;
+
 }
 .media-image {
     max-width: 50px;
     margin-top: 1.33em;
     float: left;
+
 }
 .media-body {
-    width: calc(100%);
+    width: calc(100% - 50px);
     float: left;
     border-bottom: 2px solid #DDD;
 }
