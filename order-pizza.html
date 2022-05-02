@@ -44,12 +44,98 @@
     </div>
 </nav>
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">Fluid jumbotron</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
 
-    </div>
+
+
+<div class="jumbotron jumbotron-fluid">
+    <!-- Jumbotron -->
+    <div class="p-5 text-center bg-image rounded-3" style="
+         background-image: url('images/pizza.png');
+         height: 346;
+         background-size: cover;
+         ">
+
+        <div class="bg-white p-2 text-dark bg-opacity-50">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="text-black">
+                    <h1 class="mb-3">Welcome to Pizza World!</h1>
+                </div>
+            </div>
+        </div>
+    <!-- Jumbotron -->
+</div>
+
+
+    <h2>Build your own pizza!</h2>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><span class="badge bg-secondary">1</span>Size and crust</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><span class="badge bg-secondary">2</span>Cheese and sauce</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><span class="badge bg-secondary">3</span>Toppings</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+        </div>
+
+        <div class="card" style="width: auto;">
+            <div class="card-body">
+                <h5 class="card-title">Choose size and crust</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">Hand Tossed</li>
+                    <div class="card" style="width: auto;">
+                        <div class="card-header">
+                            Garlic Seasoned with a rich, buttery taste
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Small( 10")
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Medium (12")
+                                </label>
+                            </div>
+                        </ul>
+
+                        <li class="list-group-item">Crispy Thin</li>
+                        <div class="card" style="width: auto;">
+                            <div class="card-header">
+                                Thin enough for optimum crispy to crunchy ratio
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Medium (12")
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Large (14")
+                                    </label>
+                                </div>
+                            </ul>
+                    </div>
+
+                </ul>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-primary" type="button">Next step ></button>
+                </div>
+            </div>
+        </div>
+
 </div>
 
 </div>
