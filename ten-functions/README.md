@@ -16,27 +16,27 @@
 1. Open up the project with your IDE.
 
 1. Write your javascript code for the problems described below in
-   `solutions.js`.
+   `solutions2.js`.
 
 1. Open up `index.html` in your web browser to see the test results.
 
 ## Workflow
 
-1. At first, all of the test results will be red and failing, as you haven't written any code in `solutions.js` yet.
+1. At first, all of the test results will be red and failing, as you haven't written any code in `solutions2.js` yet.
 
-1. Inside of `solutions.js` write code that creates the functions detailed in the section below.
+1. Inside of `solutions2.js` write code that creates the functions detailed in the section below.
 
-1. As you make changes to the code in `solutions.js`, refresh the `index.html` page in your browser.
+1. As you make changes to the code in `solutions2.js`, refresh the `index.html` page in your browser.
 
 1. Observe how the test results change as you update your functions code.
 
-1. Read the output from the failing tests to help you figure out what changes you need to make to `solutions.js`.
+1. Read the output from the failing tests to help you figure out what changes you need to make to `solutions2.js`.
 
 ## The "Ten Functions" Exercises
 
 0. The comments to the right of the function call example demonstrate the output
    of the function's operation on the provided input(s). Add your function
-   definitions to `solutions.js`. Refresh `index.html` to run automated tests
+   definitions to `solutions2.js`. Refresh `index.html` to run automated tests
    for feedback on your solutions.
 
 1. Define a function named `isTrue` that takes in any input and returns true if

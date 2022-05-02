@@ -24,7 +24,7 @@
 
 1. Create a branch named `firstName-lastLastname` where `firstName` is your first name and `lastName` is your last name. In IntelliJ, go to VCS, then Git, then Branches, and click "+ New Branch" and name it accordingly.
      
-1. Write your solutions to the problems presented below inside `solutions.js`.
+1. Write your solutions to the problems presented below inside `solutions2.js`.
 
 1. Read the Testing instructions below.
 
@@ -150,7 +150,7 @@
 
 ## Testing your work w/ automated tests
 
-Open `assessment.html` in your browser. Jasmine will run tests on the code inside `solutions.js`. The first time you load assessment.html, you will see every test failing because `solutions.js` is empty to start. 
+Open `assessment.html` in your browser. Jasmine will run tests on the code inside `solutions2.js`. The first time you load assessment.html, you will see every test failing because `solutions2.js` is empty to start. 
 
 The automated tests provide immediate feedback as to whether or not your solutions solve the problems.
 
@@ -158,7 +158,7 @@ The automated tests provide immediate feedback as to whether or not your solutio
 
 - If all the specs for `isNegative` function are green, then the provided solution is correct.
 
-- Make sure that the functions inside `solutions.js` are not wrapped in an IFFE.
+- Make sure that the functions inside `solutions2.js` are not wrapped in an IFFE.
 
 ## How solutions will be graded
 
