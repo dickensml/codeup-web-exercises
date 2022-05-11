@@ -45,23 +45,35 @@
 // function mostExpensive(products) {
 //
 //     let max = 0;
-//     products.forEach(products => {
-//         if (products.priceInCents > max) {
-//             max = products.priceInCents;
+//     let returnObject = {};
+//     products.forEach(product => {
+//         if ((product.priceInCents > max) && (product.isInStock)) {
+//             max = product.priceInCents;
+//             returnObject = product;
 //         }
 //     });
-//     console.log(max);
+//     return(returnObject);
 // }
-// mostExpensive();
+// console.log(mostExpensive(products));
 
-function leastExpensive(products) {
+// returnLeastExpensiveProductObjectInStock(products)
 
-    let least = products.priceInCents;
-    products.forEach(products <= {
-        if (products.priceInCents < least)
-        {least = products.priceInCents;
-        }
-    });
-    console.log(least);
+// function leastExpProd(products) {
+//
+//     let max = products[0].priceInCents;
+//     let returnProd = {}
+//     products.forEach(product => {
+//         if ((product.priceInCents <= max) && (product.isInStock)) {
+//         max = product.priceInCents;
+//         returnProd = product;
+//         }
+//     });
+//     return(returnProd);
+// }
+// console.log(leastExpProd(products));
+
+// returnAveragePriceOfAllProductsInStock(products)
+
+function avPrice(products) {
+
 }
-leastExpensive();

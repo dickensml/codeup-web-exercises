@@ -22,7 +22,7 @@
     //     multNum ++;
     //     while (multNum <= 10) {
     //
-    //       console.log(input * multnum);
+    //       console.log(input * multNum);
     //   }
     //
     // }
