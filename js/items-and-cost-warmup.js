@@ -38,23 +38,9 @@
 // Create the following functions that take in an array of product objects and return various values:
 //
 //     returnMostExpensiveProductObjectInStock(products)
-// returnLeastExpensiveProductObjectInStock(products)
-// returnAveragePriceOfAllProductsInStock(products)
-// returnProductObjectsNotInStock(products)
 
-// function mostExpensive(products) {
+
 //
-//     let max = 0;
-//     let returnObject = {};
-//     products.forEach(product => {
-//         if ((product.priceInCents > max) && (product.isInStock)) {
-//             max = product.priceInCents;
-//             returnObject = product;
-//         }
-//     });
-//     return(returnObject);
-// }
-// console.log(mostExpensive(products));
 
 // returnLeastExpensiveProductObjectInStock(products)
 
@@ -74,6 +60,31 @@
 
 // returnAveragePriceOfAllProductsInStock(products)
 
-function avPrice(products) {
+// function avPrice(products) {
+//     let sum = 0;
+//     for (var i = 0; i < products.length; i++) {
+//         if (products[i].isInStock) {
+//             sum += products[i].priceInCents;
+//         }
+//     }
+//     return sum / products.length;
+// }
+// console.log(avPrice(products));
 
+// returnProductObjectsNotInStock(products)
+
+function notInStock(products) {
+    // for (var i = 0; i < products.length; i++) {
+    //      if (products[i].isInStock = false) {
+
+    // products.forEach(product => {
+//         if ((product.priceInCents > max) && (product.isInStock)) {
+//             max = product.priceInCents;
+//             returnObject = product;
+//         }
+    products.forEach(product => {
+        if (products.isInStock = false)
+            return products.name;
+    }
 }
+console.log(notInStock(products));
