@@ -68,5 +68,4 @@ function lowest(passInParameter) {
     }
     return lowNum;
 }
-
 console.log('Lowest is', lowest(grades))
