@@ -85,6 +85,6 @@ function notInStock(products) {
     products.forEach(product => {
         if (products.isInStock = false)
             return products.name;
-    }
+    })
 }
 console.log(notInStock(products));
