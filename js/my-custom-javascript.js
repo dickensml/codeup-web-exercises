@@ -4,7 +4,7 @@ $(document).ready(function() {
    // jQuery - Select element with ID of 'pageLink' and set innerHTML using html() method
 
    // ID Selector
-   $('#pageLink').html("<h1>Link to Somewhere</h1>");
+   $('#pageLink').html("<h1>Welcome to Neverland</h1>");
 
    // Vanilla JS way
    // document.getElementById("pageLink").innerHTML = "<h1>Link to Somewhere</h1>";
@@ -19,16 +19,16 @@ $(document).ready(function() {
 
    // If you want to change more than one property, you can pass an object with key-value pairs (property, value)
 
-   // $('li').css({
-   //     'background-color': 'hotpink',
-   //     'border-bottom': '1px solid black',
-   // })
-   $('li').css('background-color', 'rebeccapurple');
+   $('li').css({
+       'background-color': 'hotpink',
+       'border-bottom': '1px solid black',
+   })
+   $('li').css('background-color', 'white');
 
    // Selecting Multiple Elements -> returns array of element nodes
-   $('h1, #pageLink, #list').css('color', 'forestgreen')
+   $('h1, #pageLink, #list').css('color', 'blue')
 
    // All Selector -> select every element on the page
-   $('*').css('border', '2px dotted black')
+   $('*').css('border', '2px black')
 
 });
