@@ -14,27 +14,21 @@
 <script>
     "use strict";
 
-    var konamiKeys = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]
+    var konamiKeys = '3838404037393739666513'
+    var input = '';
 
     $(document).keyup(function(event){
         console.log(event.keyCode);
     });
 
 
-    function keyDownHandler (e) {
-        // report values from the key to event to the page
-        var values = "Key: " + e.key + " KeyCode: "+ e.keyCode;
-        $("#keydownValue").get(0).innerText = values;
-    }
-    $(document).keydown(keyDownHandler)
-
-    function keypressHandler (e) {
-        // adding to the end of a string
-        var keyPress = $("#keypressValue");
-        var text = keyPress.text();
-        keyPress.text(text + e.key)
-    }
-    $(document).keypress(keypressHandler)
+    // function keypressHandler (e) {
+    //     // adding to the end of a string
+    //     var keyPress = $("#keypressValue");
+    //     var text = keyPress.text();
+    //     keyPress.text(text + e.key)
+    // }
+    // $(document).keypress(keypressHandler)
 
 
 
