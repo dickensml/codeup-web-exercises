@@ -7,7 +7,7 @@
 <body>
 
 <header>
-    <h1 id="header">This is a header...</h1>
+    <h1>This is a header...</h1>
 </header>
 
 <main>
@@ -23,7 +23,7 @@
     </ul>
 
     <div>
-        <p id="words">
+        <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem cum distinctio dolore dolores eos
             explicabo fugit id impedit iure, laudantium magnam minus nemo nisi perspiciatis quae quaerat similique
             temporibus, tenetur velit? Ad deserunt eum id ipsum omnis perspiciatis sed sit? Aliquam eveniet placeat
@@ -41,15 +41,15 @@
     'use strict';
 
     $(function () {
-        $('#header').click(function (e) {
+        $('h1').click(function (e) {
 // $("#header").css("background-color","red");
-            e.target.style.backgroundColor = 'green'
+            e.target.style.backgroundColor = 'lightblue'
         });
     })
 
     $(function () {
-        $('#words').dblclick(function (e) {
-            e.target.style.fontSize = '18px'
+        $('p').dblclick(function (e) {
+            e.target.style.fontSize = '28px'
         });
     })
 
