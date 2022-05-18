@@ -33,8 +33,7 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
-<button id="pButton">Change the script!</button>
-
+<button id="change-subp">Change the script!</button>
 <script>
     (function () {
         "use strict";
@@ -75,12 +74,19 @@
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         // var subParagraph = document.getElementsByClassName('sub-paragraph');
         // subParagraph[0].innerHTML = "Mission Accomplished!";
-        document.getElementById('pButton').addEventListener('click', function() {
-            document.getElementsByClassName("sub-paragraph")[0].innerHTML = "Mission Accomplished!"
+
+        // var subParagraphs = document.getElementsByClassName('sub-paragraph');
+        //
+        // document.querySelector('pButton').addEventListener('click', function() {
+        //     subParagraphs[0].innerText = "Mission Accomplished!";
+        // })
+        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        console.log(subParagraphs);
+
+        document.querySelector("#change-subp").addEventListener("click", function() {
+            subParagraphs[0].innerText = "Mission Accomplished!";
         })
-
-
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        //TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
     })();
 </script>
 </body>

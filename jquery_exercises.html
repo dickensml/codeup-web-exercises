@@ -7,7 +7,7 @@
 <body>
 
 <header>
-    <h1>This is a header...</h1>
+    <h1 id="header">This is a header...</h1>
 </header>
 
 <main>
@@ -36,13 +36,13 @@
 </main>
 
 <script src="js/jquery-3.6.0.js"></script>
-
 <script>
+  $(function () {
     'use strict';
+    // var title = $('#header').html();
 
     $(function () {
         $('h1').click(function (e) {
-// $("#header").css("background-color","red");
             e.target.style.backgroundColor = 'lightblue'
         });
     })
@@ -59,8 +59,8 @@
         },
         function() {
             $(this).css('color', 'black');
-        }
-    );
+        });
+  });
 
 </script>
 
