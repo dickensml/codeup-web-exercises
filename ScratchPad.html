@@ -10,3 +10,26 @@
 
 </body>
 </html>
+
+
+
+//Define a function named `isDivisible` that takes in two numeric inputs: a value and divisor. If the numeric value can be evenly divided by the divisor, then return true. Otherwise, return false.
+
+function isDivisible(input1, input2) {
+//your solution goes inside this function - you can change the names of the parameters input1, input2 to use in this function if you want
+
+function isNum (input) {
+return !isNaN(parseFloat(input))
+}
+
+
+// tests for isEvenlyDivisible
+
+console.log('isDivisible(75, 5) should be true', isDivisible(75, 5));
+console.log('isDivisible(25, 25) should be true', isDivisible(25, 25));
+console.log('isDivisible(\'fifty\', 2) should be false', isDivisible('fifty', 2));
+console.log('isDivisible( ) should be false', isDivisible());
+console.log('isDivisible(50, 2) should be true', isDivisible(50, 2));
+console.log('isDivisible(50, 3) should be false', isDivisible(50, 3));
+console.log('isDivisible(null, 2) should be false', isDivisible(null, 2));
+console.log('isDivisible(50, null) should be false', isDivisible(50, null))
