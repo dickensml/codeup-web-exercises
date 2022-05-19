@@ -15,10 +15,10 @@
 <table id="products">
     <thead>
     <tr>
-        <th class="text-blue">Item</th>
-        <th class="m-4">Quantity</th>
-        <th class="m-4">Price</th>
-        <th class="m-4">Categories</th>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Categories</th>
     </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
@@ -50,12 +50,33 @@
                     '<th>' + inventory.title + '</th>',
                     '<th>' + inventory.quantity + '</th>',
                     '<th>' + '$' + inventory.price + '</th>',
-                    '<th>' + inventory.categories + '</th>',
+                    '<th>' + inventory.categories.join(', ') + '</th>',
                     '</tr>'
                 );
             })
-        })
-        // RELOAD PAGE ON BUTTON CLICK EVENT.
+        });
+        // ----------RELOAD PAGE ON BUTTON CLICK EVENT. ----------
+
+        //Javier's function
+        // function loadInventory(){
+        //     $.get("/data/inventory.json").done(function(data){
+        //         $("#insertProducts").html("");
+        //         data.forEach(function(tool){
+        //             $("#insertProducts").append("<tr>+" +
+        //                 "<td>" + tool.title + "</td>" +
+        //                 "<td>" + tool.quantity + "</td>" +
+        //                 "<td>" + tool.price + "</td>" +
+        //                 "<td>" + tool.categories.join(', ') + "</td>");
+        //         });
+        //     });
+        // }
+        //
+        // loadInventory();
+        //
+        // $("button").on('click', function(){
+        //     loadInventory();
+        // });
+
         $('#refresh').click(function () {
             location.reload(true);
         });
