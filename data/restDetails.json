@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Faison's",
+    "address": "123 Primo St.",
+    "style": "Italian",
+    "cost": "$$$",
+    "coords": "30.552381478398, -97.82960579090"
+  },
+
+  {
+    "name": "Cheers",
+    "address": "456 Sam Malone Ave.",
+    "style": "American Cuisine",
+    "cost": "$$",
+    "coords":"30.53924617061178, -97.77954486978587"
+  },
+  {
+    "name": "Ichiban",
+    "address": "4 Cannery Row",
+    "style": "American Cuisine",
+    "cost": "$$$",
+    "coords":"30.48406773733246, -97.7692768214706"
+  },
+
+  {
+    "name": "Porky's",
+    "address": "72 Beal St.",
+    "style": "Burgers and Dogs",
+    "cost": "$",
+    "coords":"30.487214596758708, -97.85658804254949"
+  }
+]
