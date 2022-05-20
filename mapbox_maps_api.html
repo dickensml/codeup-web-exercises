@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Mapbox: Favorite Restaurants</title>
@@ -19,6 +19,7 @@
 
 </head>
 <body>
+<h3>Restaurant Locator</h3>
 
 <div id='map' class="mx-auto mt-4"></div>
 
@@ -52,6 +53,16 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </script>
 <script src="/js/mapbox-geocoder-utils.js"></script>
+
+<script>
+
+$(function() {
+
+    $('h3').css('color', 'blue').css('position', 'relative')
+
+});
+
+</script>
 
 <script>
     mapboxgl.accessToken = MAPBOX_API_TOKEN;
@@ -102,13 +113,6 @@
         e.preventDefault();
         map.setZoom($("#zoom").val());
     });
-
-
-
-    // geocode(jQuery
-    // selector, MAPBOX_API_TOKEN
-    // ).then(function (response) {
-    // });
 
 
     $.ajax("/data/restDetails.json").done(function (data) {
