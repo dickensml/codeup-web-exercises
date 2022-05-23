@@ -11,6 +11,7 @@
     <script src="js/keys.js"></script>
     <script type="text/javascript" src="/js/jquery-3.6.0.js"></script>
     <script type="text/javascript" src="/js/weather_map.js"></script>
+    <script> src = "css/weather-map.css"</script>
 
     <style>
         #map {
@@ -21,12 +22,19 @@
 
 </head>
 <body>
-<nav>
+<!--<nav>-->
 
+<!--    <div class="container-fluid">-->
+<!--        <h4 class="p-2 mb-2 bg-primary text-white">Weather on the Fly<span-->
+<!--                id='location' class="p-2 mb-2 justify-text-right text-white"></span></h4>-->
+<!--        &lt;!&ndash;  This is clearly not the best way...      &ndash;&gt;-->
+<!--    </div>-->
+<!--</nav>-->
+
+<nav class="navbar bg-primary">
     <div class="container-fluid">
-        <h4 class="p-2 mb-2 bg-primary text-white">Weather on the Fly<span
-                id='location' class="p-2 mb-2 justify-text-right text-white"></span></h4>
-        <!--  This is clearly not the best way...      -->
+        <h4 class="App-title mb-1 text-white">Weather on the Fly</h4>
+        <p id="location" class="current-city-display mb-1 text-white">Current city:</p>
     </div>
 </nav>
 
@@ -43,30 +51,49 @@
 <script>
     $(function () {
 
-
-        <!-----------------Display local/start point five day forecast -------------------->
     });
 </script>
 
+<!--<div class="card">-->
+<!--    <div class="card-body">-->
+<!--        <ul class="feature-list">-->
+<!--            <li id="date"></li>-->
+<!--            <li id="currentTemp"></li>-->
+<!--            <li id="description" >Description:</li>-->
+<!--            <li id="humidity" >Humidity:</li>-->
+<!--            <li id="wind" >Wind:</li>-->
+<!--            <li id="pressure" >Pressure:</li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</div>-->
 
-<div class="card">
-    <div class="card-body">
-        <ul class="feature-list">
-            <li id="date">Year-month-day</li>
-            <li id="currentTemp"></li>
-            <li id="description" >Description:</li>
-            <li id="humidity" >Humidity:</li>
-            <li id="wind" >Wind:</li>
-            <li id="pressure" >Pressure:</li>
-        </ul>
+
+<!-----------------Display local/start point five day forecast -------------------->
+<div class="container">
+
+    <div class="card-one">
+        <div class="card-body">
+            <ul class="feature-list">
+                <li id="date"></li>
+                <li id="currentTemp"></li>
+                <li id="description">Description:</li>
+                <li id="humidity">Humidity:</li>
+                <li id="wind">Wind:</li>
+                <li id="pressure">Pressure:</li>
+            </ul>
+        </div>
     </div>
-</div>
 
+
+
+</div>
+<div id='five-day' class="row"></div>
 <div id='map' class="mx-auto mt-4"></div>
 
 <script>
     $(function () {
         $('.feature-list').css('list-style', 'none')
+
     });
 
 </script>

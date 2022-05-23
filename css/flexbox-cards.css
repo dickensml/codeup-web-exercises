@@ -26,10 +26,10 @@ a {
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.2);
-    margin: 20px;
-    padding: 20px;
-    border-radius: 4px;
+    background: lightgrey;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
     text-align: center;
     /*  TODO: Change this flex items basis to 100% of the page  */
     flex-basis: 100%;
