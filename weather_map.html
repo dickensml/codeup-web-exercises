@@ -24,49 +24,40 @@
 <nav>
 
     <div class="container-fluid">
-    <h4 class="p-2 mb-2 bg-primary text-white">Weather on the Fly<span class="p-2 mb-2 text-white">--place holder for current location--</span></h4>
-<!--  This is clearly not the best way...      -->
+        <h4 class="p-2 mb-2 bg-primary text-white">Weather on the Fly<span
+                id='location' class="p-2 mb-2 justify-text-right text-white"></span></h4>
+        <!--  This is clearly not the best way...      -->
     </div>
 </nav>
 
 
 <!--Search for place-->
 <form class="mx-left w-50 m-2">
-    <label for="setMarker">Enter an address</label>
+    <label for="setMarker">Enter a location</label>
     <input type="text" name="setMarker" id="setMarker" class="my-2">
     <button id="setMarkerButton">Submit</button>
 </form>
 
-                <!-----------------Display local/start point current weather-------------------->
+<!-----------------Display local/start point current weather-------------------->
 
 <script>
-    // $(function() {
-
-$.get("https://api.openweathermap.org/data/2.5/weather", {
-APPID: OPEN_WEATHER_APPID,
-lat:    30.50919521933195,
-lon:   -97.68168822541604,
-units: "imperial"
-}).done(function(data) {
-// console.log('current weather', data);
-return(data.main.temp + 'is the current temperature in Round Rock');
-});
+    $(function () {
 
 
-    <!-----------------Display local/start point five day forecast -------------------->
-
+        <!-----------------Display local/start point five day forecast -------------------->
+    });
 </script>
 
 
 <div class="card">
     <div class="card-body">
-        <p>Year-month-day</p>
-        <p>current temp</p>
         <ul class="feature-list">
-            <li class="feature-item">Description</li>
-            <li class="feature-item">Humidity</li>
-            <li class="feature-item">Wind</li>
-            <li class="feature-item">Pressure</li>
+            <li id="date">Year-month-day</li>
+            <li id="currentTemp"></li>
+            <li id="description" >Description:</li>
+            <li id="humidity" >Humidity:</li>
+            <li id="wind" >Wind:</li>
+            <li id="pressure" >Pressure:</li>
         </ul>
     </div>
 </div>
@@ -74,7 +65,7 @@ return(data.main.temp + 'is the current temperature in Round Rock');
 <div id='map' class="mx-auto mt-4"></div>
 
 <script>
-    $(function() {
+    $(function () {
         $('.feature-list').css('list-style', 'none')
     });
 
