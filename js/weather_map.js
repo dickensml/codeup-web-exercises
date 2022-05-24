@@ -65,7 +65,7 @@ $(function () {
     // });
     //
     //     console.log(formatTime(data.dt));
-    //
+
     //     $('#date').append(formatTime(data.dt));
     //     $('#currentTemp').append('  ' + data.main.temp_min + " / " + data.main.temp_max + '\u00B0 F');
     //     $('#description').append('  ' + data.weather[0].description);
@@ -74,6 +74,20 @@ $(function () {
     //     $('#pressure').append('  ' + data.main.pressure);
     //
     // });
+    // const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+    //
+    // function formatTime(time) {
+    //     let dateTime = new Date(time * 1000);
+    //     let year = dateTime.getFullYear();
+    //     let month = months[dateTime.getMonth()];
+    //     let day = dateTime.getDate();
+    //     // let hour = appendLeadingZeroes(dateTime.getHours());
+    //     // let minutes = appendLeadingZeroes(dateTime.getMinutes());
+    //     // let seconds = appendLeadingZeroes(dateTime.getSeconds());
+    //     let formattedDateTime = year + "-" + month + "-" + day;
+    //
+    //     return formattedDateTime;
+    // };
 
 
 //returns 5 day forecast weather in F, by coords:
@@ -89,7 +103,7 @@ $(function () {
         // data.daily.(function (dailyForecast, index) {
             // if (index < 5)
 
-                for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 5; i++) {
                     var dailyForecast = data.daily[i]
                     $("#five-day").append(
                         '<div class="col">' +
@@ -107,7 +121,6 @@ $(function () {
                     // });
                 }
     });
-
 
 
     const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
