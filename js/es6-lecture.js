@@ -100,8 +100,8 @@
 // var dessertMessage = 'Well, I love ' + greatDessert + ' ' + 'but I don\'t care for ' + badDessert + '.';
 // console.log(dessertMessage);
 
-let dessertMessage = `Well, I love ${'banana pudding'}, but I don't care for ${'rhubarb pie'}.`;
-console.log(dessertMessage);
+// let dessertMessage = `Well, I love ${'banana pudding'}, but I don't care for ${'rhubarb pie'}.`;
+// console.log(dessertMessage);
 
 
 // ============== for ..of loop (works on node lists!!!)
@@ -146,17 +146,17 @@ console.log(dessertMessage);
 
 // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
 //
-var message = '';
-var names = ['John', 'Paul', 'George', 'Ringo'];
-for (var i = 0; i < names.length; i += 1) {
-    message += 'Hello, ' + names[i] + '\n';
-}
-console.log(message);
-
-for (let name of names) {
-    let message = `Hello, ${name}, `;
-}
-console.log(message);
+// var message = '';
+// var names = ['John', 'Paul', 'George', 'Ringo'];
+// for (var i = 0; i < names.length; i += 1) {
+//     message += 'Hello, ' + names[i] + '\n';
+// }
+// console.log(message);
+//
+// for (let name of names) {
+//     let message = `Hello, ${name}, \n`;
+// }
+// console.log(message);
 
 
 // ============== Arrow Functions
@@ -202,13 +202,20 @@ console.log(message);
 // const returnTwo = () => 2;
 
 
-// ============== MINI EXERCISE
-
-// TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
-
+// const addNames = (fName, lName) => `${fName} ${lName}`;
+// console.log(addNames('Mike', 'D'));
+//
+// // ============== MINI EXERCISE
+//
+// // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
+//
 // var doubleInput = function(input) {
 //     return input * 2;
-// }
+// };
+
+// const doubleInput = input => * 2;
+// console.log(doubleInput(5));
+
 
 
 // ============== Default Parameter Values
@@ -234,7 +241,9 @@ console.log(message);
 
 // Even better ES6 approach
 
-// let addArgsC = (num1 = 2, num2 = 2) => num1 + num2;
+
+
+ // let addArgsC = (num1 = 2, num2 = 2) => num1 + num2;
 
 // Test output
 
@@ -264,14 +273,14 @@ console.log(message);
 // let isCute = true;
 
 // ES5 way...
-
+//
 // var dog = {
 //     breed: breed,
 //     age: age,
 //     name: name,
 //     isCute: isCute
 // };
-// //
+//
 // console.log(dog.name);
 
 // ES6 way...
@@ -283,7 +292,7 @@ console.log(message);
 //     isCute
 // };
 // //
-// console.log(dog.name);
+// console.log(dog);
 
 
 // ============== Object / Array Destructuring
@@ -296,16 +305,16 @@ console.log(message);
 //     name: "Sabrina",
 //     isCute: true
 // };
-
-// let breed = puppy.breed;
-// let age = puppy.age;
-// let name = puppy.name;
-// let isCute = puppy.isCute;
-
+//
+// // let breed = puppy.breed;
+// // let age = puppy.age;
+// // let name = puppy.name;
+// // let isCute = puppy.isCute;
+//
 // let { breed, age, name, isCute } = puppy;
-//
-//
 // //
+// //
+// // //
 // console.log(breed);
 // console.log(age);
 // console.log(name);
@@ -322,8 +331,8 @@ console.log(message);
 //     extra: "asdfasd",
 //     extra1: "sdfsdf"
 // }
-
-
+//
+//
 // function buildWeatherPanel({ hum, temp, pressure }) {
 //     // let { hum, temp, pressure } = data;
 //     let { degreesMetric, degreesImperial } = temp;
@@ -335,7 +344,8 @@ console.log(message);
 //         </div>
 //     `;
 // }
-
+//
+// console.log(buildWeatherPanel(data));
 
 
 
@@ -343,12 +353,12 @@ console.log(message);
 // destructuring with arrays...
 
 // let cats = ["CJ", "Claude", "Max"];
-
+//
 // let [ cat1, cat2, cat3 ] = cats;
-
-// let cat1 = cats[0];
-// let cat2 = cats[1];
-// let cat3 = cats[2];
+//
+// // let cat1 = cats[0];
+// // let cat2 = cats[1];
+// // let cat3 = cats[2];
 //
 //
 // console.log(cat1);
@@ -360,35 +370,35 @@ console.log(message);
 
 // destructuring...
 
-// const getArea = ({ height, width }) => height * width;
-//
-// let shape = {
-//     height: 20,
-//     width: 10
-// };
-//
-// let rectangle1 = {
-//     height: 40,
-//     width: 10
-// }
-//
-// let rectangle2 = {
-//     height: 20,
-//     width: 40
-// }
-//
-// console.log(getArea(shape));
-// console.log(getArea(rectangle1));
-// console.log(getArea(rectangle2));
+const getArea = ({ height, width }) => height * width;
+
+let shape = {
+    height: 20,
+    width: 10
+};
+
+let rectangle1 = {
+    height: 40,
+    width: 10
+}
+
+let rectangle2 = {
+    height: 20,
+    width: 40
+}
+
+console.log(getArea(shape));
+console.log(getArea(rectangle1));
+console.log(getArea(rectangle2));
 
 // assignment...
 
-// let height = 20;
-// let width = 10;
+let height = 20;
+let width = 10;
 
 
 
-// console.log(getArea({ height, width }));
+console.log(getArea({ height, width }));
 
 
 // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
