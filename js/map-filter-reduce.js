@@ -1,3 +1,5 @@
+"use strict";
+
 const users = [
     {
         id: 1,
@@ -35,3 +37,9 @@ const users = [
         yearsOfExperience: 9
     }
 ];
+
+// let under50 = products.filter(products => products.price < 50);
+
+let langArr = users.filter(users => users.languages > 2);
+
+console.log(langArr);

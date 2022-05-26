@@ -6,9 +6,29 @@
 </head>
 
 <script src="js/jquery-3.6.0.js"></script>
-<script src="js/map-filter-reduce-lec.js"></script>
+<script src="js/map-filter-reduce.js"></script>
 
 <body>
 
 </body>
 </html>
+
+
+<script>
+
+    "use strict";
+
+    const numbers = [1, 5, 6, 2];
+
+    const highestNumber = numbers.reduce(function(highestNum, currentNumber) {
+        if (currentNumber > highestNum) {
+            return currentNumber;
+        } else {
+            return highestNum;
+        }
+    }, 0);
+
+    console.log(highestNumber);
+
+
+</script>
