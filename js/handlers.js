@@ -1,5 +1,5 @@
 import {baseURL, fetchSettings} from "./constants.js";
-import {mapButtonsForUpdate, mapUserToDelete, mapUserToUpdate, mapUserToView} from "./maps.js";
+import {mapButtonsForUpdate, mapUserCreateForm, mapUserToDelete, mapUserToUpdate, mapUserToView} from "./maps.js";
 
 
 /**
@@ -37,8 +37,20 @@ const handleDoDelete = (event) => {
     // TODO: Delete User by ID
     // TODO: Hide Modal
     // TODO: Reload form
-}
 
+    let settings = fetchSettings;
+    settings.method = "DELETE";
+
+    fetch(baseURL + "/user/" + event.target.value, settings)
+        .then(res => res.json())
+        .then(res => {
+            console.log("res :", res);
+            disableModal();
+        })
+
+
+
+}
 
 
 // Example: get fetch request
@@ -46,18 +58,45 @@ export const handleDisplayProfile = (event) => {
     toggleModal();
     // TODO: Create fetch to get the profile information
     // TODO: Map info to modal in view.
+
+    // console.log("event.target.dataset.id", event.target.dataset.id);
+
+    fetch(baseURL + "/user/" + event.target.dataset.id, fetchSettings)
+        .then(res => res.json())
+        .then(res => {
+            // console.log("res user:", res)
+            modal.main.innerHTML = mapUserToView(res);
+            modal.foot.innerHTML = `<button class="close-modal">Close</button>`
+
+            $(".close-modal").click(() => disableModal());
+
+        })
 }
-
-
-
 
 
 // Example: get fetch request
 export const handleDisplayUpdate = (event) => {
+    enableModal();
+    //console.log("event :", event);
 
     //TODO: Get Data from user by Id
     //TODO: Map to update form
     //TODO: Add handlers
+
+    fetch(baseURL + "/user/" + event.target.value, fetchSettings)
+        .then(res => res.json())
+        .then(res => {
+
+            modal.main.innerHTML = mapUserToUpdate(res);
+            modal.foot.innerHTML = mapButtonsForUpdate(res.id);
+
+
+            $("button.confirm.update").click(handleDoUpdate);
+
+
+
+        })
+
 
 };
 
@@ -67,23 +106,80 @@ export const handleDisplayUpdate = (event) => {
 export const handleDoUpdate = (event) => {
     event.preventDefault();
 
-    // TODO: GET form data
-    // TODO: Update the user with the new form data.
-    // TODO: hide modal.
+    const form = document.forms.update;
 
+    let data = {
+        id: form.id.value,
+        firstName: form.firstName.value,
+        lastName: form.lastName.value,
+        gender: form.gender.value,
+        dateOfBirth: form.dateOfBirth.value,
+        phone: form.phone.value,
+        picture: form.picture.value
+    }
+
+    let settings = {
+        ...fetchSettings,
+        method: "PUT",
+        body: JSON.stringify(data)
+    }
+
+    fetch(baseURL + "/user/" + event.target.value, settings)
+        .then(res => res.json())
+        .then(res => {
+            console.log("res:", res);
+            // TODO: use this value to update the field record in the table
+            disableModal();
+        })
 }
 
-const handleCreateUserView = (event) => {
+export const handleCreateUserView = (event) => {
     // TODO: Create form for users to fill out.
+    // Inputs!
+
+    modal.main.innerHTML = mapUserCreateForm();
+    modal.foot.innerHTML = mapButtonsForUpdate(0,"create")
+
+    $("button.confirm.create").click(handleDoCreateUser);
+    enableModal();
+
 }
 
 
 // Example: POST request
-const handleDoCreateUser = () => {
+export const handleDoCreateUser = (event) => {
     // TODO: Create a new User!
+    event.preventDefault();
+
+    const form = document.forms.create;
+
+    let data = {
+        id: form.id.value,
+        title: form.title.value,
+        firstName: form.firstName.value,
+        lastName: form.lastName.value,
+        email: form.email.value,
+        gender: form.gender.value,
+        dateOfBirth: form.dateOfBirth.value,
+        phone: form.phone.value,
+        picture: form.picture.value
+    }
+
+    // Data request to create a new one
+    let settings = {
+        ...fetchSettings,
+        method: "POST",
+        body: JSON.stringify(data)
+    }
+
+
+    fetch(baseURL + "/user/create", settings)
+        .then(res => res.json())
+        .then(res => {
+            console.log("res:", res)
+        })
+
 }
-
-
 
 
 
@@ -99,4 +195,7 @@ export const enableModal = () => {
     modal.all.classList.remove("hide");
 }
 
-
+export const disableModal = () => {
+    modal.container.classList.add("hide")
+    modal.all.classList.add("hide");
+}

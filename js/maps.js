@@ -20,17 +20,40 @@ export const mapUserToRecord = ({id, firstName, lastName, picture, title}) => {
                    </tr>`
     };
 
-export const mapUserToUpdate =
-    ({id, title, firstName, lastName, gender, email, dateOfBirth, phone, picture, location}) => {
+export const mapUserToUpdate = (data) => {
+    return createForm("update", data)
+}
 
-        // handle Z in data for timezone, might need to add back for update
-        dateOfBirth = dateOfBirth.slice(0, dateOfBirth.length-1);
+export const mapUserCreateForm = () => {
+    return createForm("create")
+}
 
-        return `
-    <form name="update">
+export const createForm = (name, data) => {
+    if(!data) {
+        data = {
+            id: 0,
+            title: "",
+            firstName: "",
+            lastName: "",
+            gender: "",
+            email: "",
+            dateOfBirth: "",
+            phone: "",
+            picture: ""
+        }
+    }
+
+    let {id, title, firstName, lastName, gender,
+        email, dateOfBirth, phone, picture} = data;
+
+    // handle Z in data for timezone, might need to add back for update
+    if(data) dateOfBirth = dateOfBirth.slice(0, dateOfBirth.length-1);
+
+    return `
+        <form name="${name}">
         <input type="hidden" name="id" value="${id}">
-        <label for="field1">Title</label><input type="text" name="title" value="${title.toLocaleUpperCase()}" id="field1">
-        <label for="field2">First Name</label><input type="text" name="firstName" value=${firstName} id="field2">
+        <label for="field1">Title</label><input type="text" name="title" value="${title.toUpperCase()}" id="field1">
+        <label for="field2">First Name</label><input type="text" name="firstName" value="${firstName}" id="field2">
         <label for="field3">Last Name</label><input type="text" name="lastName" value="${lastName}" id="field3">
         <label for="field4">Gender</label><input type="text" name="gender" value="${gender}" id="field4">
         <label for="field5">Email</label><input type="text" name="email" value="${email}" id="field5">
@@ -40,6 +63,8 @@ export const mapUserToUpdate =
     </form>
     `
 }
+
+
 
 export const mapUserToView =
     ({id, title, firstName, lastName, gender, email, dateOfBirth, phone, picture, location}) => {
@@ -79,7 +104,7 @@ export const mapButtonsForUpdate = (id,  type='update') => {
             </form>`
 }
 
- export const mapUserToDelete = (id) => {
+export const mapUserToDelete = (id) => {
     return `<form>
           <button class="confirm delete" value="${id}">Confirm</button>
           <button class="cancel">Cancel</button>

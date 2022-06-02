@@ -1,7 +1,10 @@
 import { mapUserToRecord } from "./maps.js";
 import {baseURL, fetchSettings} from "./constants.js";
-import {handleDisplayUpdate, handleDeleteView, toggleModal, modal, handleDisplayProfile} from "./handlers.js";
-import {users} from "./temp.js";
+import {
+    handleDisplayUpdate, handleDeleteView,
+    toggleModal, modal, handleDisplayProfile,
+    handleCreateUserView
+} from "./handlers.js";
 
 
 // LECTURE: Restful API's
@@ -30,12 +33,27 @@ import {users} from "./temp.js";
 // PUT / Patch - Update/Replace information,
 // Patch = send only fields you want them to update
 
-
-// DELETE = delete the data from the database.
-
-
+// DELETE = delete the data from the record in question.
 
 // Fetching the user from the server and then mapping it to the user record.
-// TODO: Add in Fetch to get the users
-// TODO: Add Handlers to events
 
+
+// Example: get request
+fetch(baseURL + "/user?limit=50&page=1", fetchSettings)
+    .then(res => res.json())
+    .then(res => {
+        // want to map the users to the page
+        // console.log("res:", res)
+        // mapUserToRecord()
+
+        console.log("res:", res)
+
+        document.getElementById("users").innerHTML +=
+            res.data.map(mapUserToRecord).join("");
+
+        //event handlers!
+        $(".delete").click(handleDeleteView);
+        $(".edit").click(handleDisplayUpdate);
+        $(".user-record").click(handleDisplayProfile);
+        $("#create").click(handleCreateUserView);
+    });
